@@ -1,0 +1,867 @@
+@font-face {
+    font-family: 'Lulu Med';
+    src: url('./fonts/Lulu_Font.ttf') format('truetype');
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+    /* Adjust scrollbar width */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    /* Set the scrollbar thumb color */
+    border-radius: 20px;
+    /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    /* Set track background color */
+    border-radius: 10px;
+    /* Rounded corners for the track */
+}
+
+/* Optional: Adding hover effects to scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary-dark);
+    /* Change the thumb color when hovered */
+}
+
+/* Custom scrollbar for the entire page */
+html,
+body {
+    scrollbar-width: thin;
+    /* Firefox */
+    scrollbar-color: var(--primary) Transparent;
+    /* Firefox */
+}
+
+
+:root {
+    --background: #E8E6E7;
+    --foreground: #ffffff;
+    --primary: #552a6b;
+    --primary-light: #b0a5b7;
+    --primary-dark: #380355;
+    --accent: #f5d8f1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lulu Med', sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: 'Lulu Med', sans-serif;
+    min-height: 100vh;
+}
+
+.petopia-font {
+    font-family: 'Lulu Med', sans-serif;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    padding: 1rem;
+    background-color: var(--primary);
+    position: relative;
+    border-bottom-right-radius: 50px;
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    /* Adjust to match the logo */
+    color: white;
+    font-weight: bold;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/Paw_BG.jpeg');
+    /* Adjust path as needed */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    /* 20% transparency */
+    z-index: 0;
+    border-bottom-right-radius: 50px;
+}
+
+.logo {
+    width: 50px;
+    /* Adjust size as needed */
+    height: auto;
+}
+
+.menu-button {
+    color: white;
+    position: absolute;
+    left: 1rem;
+    /* Adjust spacing as needed */
+    top: 58%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menu-button::before {
+    content: "";
+    width: 5px;
+    /* Adjust size as needed */
+    height: 5px;
+    /* Adjust size as needed */
+    background-color: rgb(255, 255, 255);
+    /* Match the theme */
+    border-radius: 50%;
+    position: absolute;
+    top: -3px;
+    /* Adjust position above the button */
+    left: 58%;
+    transform: translateX(-50%);
+}
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    aspect-ratio: 16/9;
+    max-width: 90vw;
+    height: 85vh;
+    margin: 1rem auto;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: 2px solid var(--primary-dark);
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-button.prev {
+    left: 1rem;
+}
+
+.carousel-button.next {
+    right: 1rem;
+}
+
+/* Divider Styles */
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.divider-line {
+    height: 2px;
+    width: 80px;
+    background-color: black;
+}
+
+.paw-print {
+    margin: 0 1rem;
+    opacity: 0.8;
+    width: 40px;
+    height: 40px;
+}
+
+/* Content Section Styles */
+.content-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.content-section h1 {
+    color: var(--primary-dark);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.content-section p {
+    color: var(--background);
+    font-size: 1.125rem;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.adoption-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+.adoption-line {
+    height: 2px;
+    width: 48px;
+    background-color: currentColor;
+}
+
+.content-card-container {
+    width: 100%;
+    /* Full viewport width */
+    display: flex;
+    justify-content: center;
+    /* Keeps the card centered */
+    align-items: center;
+    padding: 50px 0;
+
+    /* Background with Gradient & Image */
+    background: linear-gradient(rgba(135, 116, 146, 0.4), rgba(135, 116, 146, 0.4)),
+        url('images/Card_Section_bgImg.png');
+    background-size: cover;
+    /* Ensures image covers full space */
+    background-position: bottom center;
+    /* Adjust position to avoid overflow */
+    background-repeat: no-repeat;
+}
+
+
+
+.content-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .content-cards {
+        gap: 1.5rem;
+        padding: 0.5rem;
+    }
+}
+
+
+.card {
+    background-color: #D9D9D9;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    color: var(--primary-dark);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Lulu Med', sans-serif;
+}
+
+.card p {
+    color: black;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.section-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: var(--primary);
+    font-family: 'Lulu Med', sans-serif;
+    font-size: 1.5rem;
+}
+
+.section-label::before,
+.section-label::after {
+    content: "";
+    height: 2px;
+    width: 48px;
+    background-color: currentColor;
+}
+
+.name-generator {
+    background-color: var(--primary);
+    color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin-top: 2rem;
+
+    /* Set width and height */
+    width: 80%;
+    height: 50vh;
+
+    /* Center the element horizontally and vertically */
+    margin-left: auto;
+    margin-right: auto;
+
+    /* Flexbox centering if needed on the parent container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.name-generator h2 {
+    font-family: 'Lulu Med', sans-serif;
+    font-size: 2rem;
+}
+
+/* Add a semi-transparent overlay to the body */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/placeholder.svg?height=1080&width=1920');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* Quote Section */
+.quote-section {
+    text-align: center;
+    padding-top: 50px;
+    position: relative;
+}
+
+/* Quote Box */
+.quote-box {
+    margin: auto;
+    height: 40vh;
+    padding: 20px;
+    background: #CFB8BE; /* Solid background */
+    position: relative;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.quote-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/Paper_BG.png') no-repeat center center/cover;
+    opacity: 0.5; /* 50% transparency */
+    z-index: 0; /* Places it behind text */
+}
+
+.quote-box * {
+    position: relative; /* Ensures text and other elements stay above the overlay */
+    z-index: 1;
+}
+
+/* Quote Text */
+.quote-box h2 {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.quote-box p {
+    font-size: 18px;
+    color: #4a236e;
+}
+
+/* Image Grid */
+.image-container {
+    position: absolute;
+    top: 55%;
+    left: 15%;
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image Styling */
+.image-slot {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+}
+
+/* Positioning Images to Match Layout */
+.img1 {
+    top: 90px;
+    left: 5%;
+    height: 300px;
+}
+
+/* Cow */
+.img2 {
+    top: 0px;
+    left: 21%;
+    width: 230px;
+}
+
+/* Rabbit */
+.img3 {
+    height: 400px;
+    width: 400px;
+    top: -57px;
+    left: 50%;
+}
+
+/* Dog */
+.img4 {
+    top: 124px;
+    width: 150px;
+    z-index: 1;
+}
+
+/* Kittens */
+.img5 {
+    width: 150px;
+    height: 150px;
+    top: 288px;
+    left: 50%;
+}
+
+/* Birds */
+.img6 {
+    top: 250px;
+    left: 75%;
+    height: 250px;
+}
+
+/* Puppy */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: static;
+    }
+
+    .image-slot {
+        position: static;
+        width: 150px;
+        height: 150px;
+        transform: none;
+    }
+}
+
+.Video-Box{
+    width: 100%;
+    background-color: #552a6b;
+    height: calc(100% + 50px);
+}
+
+.video-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#836096;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin: 2rem auto;
+    margin-top: 33rem;
+    max-width: 800px;
+    aspect-ratio: 16/9;
+}
+
+/* Video Section */
+.video {
+    text-align: center;
+    padding: 20px;
+}
+
+.video-section video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Why Us Section */
+.why-us {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--background);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Why Us Container */
+.why-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+/* Each Box */
+.why-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none; /* Remove the background behind images */
+    padding: 0; /* Remove padding to eliminate extra space */
+    border-radius: 10px;
+    width: 45%;
+    position: relative;
+}
+
+/* Image Styling */
+.why-img {
+    width: 100%;
+    height: 100%;
+}
+
+.why-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills its container properly */
+    border-radius: 10px;
+}
+
+/* Text Box */
+.why-text {
+    background: white;
+    color: #290844;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centers content horizontally */
+    height: 100%;
+}
+
+.why-text h3 {
+    font-size: 2rem;
+    padding-bottom: 1.5rem; /* Increases gap between h3 and p */
+    font-weight: bold;
+}
+
+.why-text p {
+    max-width: 80%; /* Reduces the width of p for better centering */
+    line-height: 1.6; /* Improves readability with better line spacing */
+    margin: 0 auto; /* Centers the paragraph */
+    font-size: 1.4rem;
+}
+
+.why-us h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #290844;
+}
+
+/* Dotted Path */
+.dotted-path {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .why-item {
+        width: 90%;
+        text-align: center;
+    }
+
+    .why-text {
+        text-align: center;
+    }
+
+    .dotted-path {
+        width: 100%;
+        height: auto;
+        left: 5%;
+    }
+}
+
+
+.reviews {
+    background-color: var(--primary-light);
+    background: linear-gradient(rgba(135, 116, 146, 0.4), rgba(135, 116, 146, 0.4)),
+        url('images/Paper_BG.png');
+    padding: 2rem 1rem;
+    text-align: center;
+    border-bottom: solid 10px #4A1F60;
+    color: black;
+    padding-bottom: 0.5rem;
+}
+
+.review-grid {
+    display: flex;
+    gap: 7rem;
+    max-width: 100%;
+    overflow-x: auto;
+    /* Allow horizontal scrolling */
+    padding-bottom: 4rem;
+    /* Optional: Prevent clipping of last item */
+}
+
+.review-item {
+    flex: 0 0 auto;
+    /* Prevent the items from shrinking or growing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review-avatar {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid #4A1F60;
+    margin-bottom: 2rem;
+}
+
+.review-grid {
+    /* Custom Scrollbar */
+    scrollbar-width: thin;
+    /* Firefox */
+    scrollbar-color: #D9D9D9 transparent;
+    /* Firefox */
+}
+
+.review-grid::-webkit-scrollbar {
+    width: 8px;
+    /* Adjust the width of the scrollbar */
+    border-radius: 10px;
+    /* Rounded corners for the scrollbar */
+}
+
+.review-grid::-webkit-scrollbar-track {
+    background: transparent;
+    /* Make the track invisible */
+    border-radius: 10px;
+    /* Rounded corners for the track */
+}
+
+.review-grid::-webkit-scrollbar-thumb {
+    background: #D9D9D9;
+    /* Visible thumb color */
+    border-radius: 10px;
+    /* Rounded corners for the thumb */
+}
+
+/* Hide the scrollbar arrows in Webkit browsers */
+.review-grid::-webkit-scrollbar-button {
+    display: none;
+}
+
+.about-us {
+    max-width: 800px;
+    margin: 4rem auto;
+    text-align: center;
+    background-color: var(--background);
+    border-radius: 1rem;
+    overflow: hidden; /* Ensures no overflow */
+}
+
+.about-us-full-image {
+    width: 100%; /* Ensures the image scales responsively */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Removes extra whitespace under the image */
+    border-radius: 1rem; /* Adds a slight rounded corner to match the section */
+}
+
+/* Connect Section */
+.connect-section {
+    padding: 50px 20px;
+    padding-right: 0;
+    background-color: var(--background);
+    text-align: center;
+}
+
+/* Container */
+.connect-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #E8E6E7;
+    padding: 20px;
+    padding-right: 0;
+    border-radius: 15px;
+}
+
+/* Left Side - Text */
+.connect-text {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.connect-text h2 {
+    font-size: 32px;
+    color: #4a236e;
+    margin-bottom: 10px;
+}
+
+.connect-text p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    color: #4a236e;
+}
+
+.email img {
+    width: 24px;
+    margin-right: 10px;
+}
+
+/* Right Side */
+.connect-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    flex: 0.8;
+    flex-grow: 1; /* Allow it to grow to fill remaining space */
+    background: #836096;
+    border-radius: 15px;
+    color: white;
+    height: 100%; /* Ensure it takes full height */
+    border-radius: 30px 0 0 30px;
+}
+
+.connect-image img {
+    display: block;
+    width: 100%;
+    z-index: 1;
+    max-width: 250px;
+    border-radius: 30px 0 0 30px;
+}
+
+/* Contact Info */
+.contact-info {
+    text-align: left;
+    margin-top: 10px;
+    padding-right: 20px;
+}
+
+/* Individual Contact Items */
+.contact-info div {
+    display: flex;
+    align-items: center; /* Align icons and text vertically */
+    justify-content: flex-start; /* Optional: Center the icons and text horizontally */
+    margin-bottom: 15px; /* Adds some space between each contact item */
+}
+
+.contact-info img {
+    margin-right: 10px; /* Space between the icon and the text */
+}
+
+/* Adjusting the individual contact information text */
+.contact-info p {
+    font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .connect-container {
+        flex-direction: column;
+    }
+
+    .connect-right {
+        width: 100%;
+    }
+} 
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    padding: 1rem;
+    background-color: var(--primary);
+    position: relative;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/Paw_BG.jpeg');
+    /* Adjust path as needed */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    /* 20% transparency */
+    z-index: 0;
+}

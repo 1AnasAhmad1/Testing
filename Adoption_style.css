@@ -1,0 +1,53 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #380355;
+    color: white;
+}
+
+header {
+    background-color: white;
+    color: #380355;
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+/* Sections */
+section {
+    background: #ffffff;
+    color: #380355;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+/* Rescue Story Slider */
+.slider {
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    animation: slide 10s infinite;
+}
+
+.story {
+    flex: 1;
+    padding: 20px;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-33.33%); }
+    66% { transform: translateX(-66.66%); }
+    100% { transform: translateX(0); }
+}

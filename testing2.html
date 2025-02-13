@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    /* Virtual Adoption Section */
+.virtual-adoption {
+    background: #380355;
+    color: #ffffff;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Adoption Intro */
+.adoption-intro p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Layout Grid */
+.layout-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* Image Section */
+.image-section img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Text Section */
+.text-section {
+    text-align: left;
+    max-width: 500px;
+}
+
+.text-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.text-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.text-section ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.text-section ul li::before {
+    content: "🐾";
+    margin-right: 10px;
+}
+
+/* Adoption Button */
+.btn-adopt {
+    background-color: #ffffff;
+    color: #380355;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.btn-adopt:hover {
+    background-color: #f2f2f2;
+}
+
+/* Steps Section */
+.steps-section {
+    margin-top: 60px;
+}
+
+.steps-section h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.step {
+    text-align: center;
+    max-width: 250px;
+}
+
+.step-number {
+    background: #ffffff;
+    color: #380355;
+    font-size: 1.8rem;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+/* Find Your Perfect Pet Section */
+.find-pet-container {
+    background: #f9f5ff;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 20px;
+}
+
+.find-pet-container h2 {
+    color: #380355;
+}
+
+.quiz-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Quiz Steps */
+.quiz-step {
+    display: none;
+}
+
+.quiz-step.active {
+    display: block;
+}
+
+/* Buttons */
+.quiz-step button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: #5a088c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.quiz-step button:hover {
+    background: #380355;
+}
+
+/* Result Display */
+.result-container {
+    display: none;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.result-container button {
+    background: #5a088c;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+    <!-- Virtual Adoption Section -->
+<section class="virtual-adoption">
+    <div class="container">
+        <h2 class="section-title">🐾 Virtual Adoption - Make a Difference!</h2>
+        
+        <div class="adoption-intro">
+            <p>
+                Virtual adoption is a wonderful way to support a pet in need without physical commitment. By adopting virtually, you ensure 
+                they receive food, medical care, and shelter while staying connected through updates and video calls.
+            </p>
+        </div>
+
+        <div class="layout-grid">
+            <!-- Left: Image -->
+            <div class="image-section">
+                <img src="images/virtual-adopt.jpg" alt="Virtual Pet Adoption">
+            </div>
+
+            <!-- Right: Adoption Info -->
+            <div class="text-section">
+                <h3>How Virtual Adoption Works?</h3>
+                <ul>
+                    <li>📸 Receive monthly updates with pictures & progress reports.</li>
+                    <li>📞 Schedule video calls to interact with your adopted pet.</li>
+                    <li>🐶 Name your pet and get an official adoption certificate.</li>
+                    <li>🎁 Get exclusive rewards for being a virtual guardian.</li>
+                </ul>
+                <button class="btn-adopt">Start Virtual Adoption</button>
+            </div>
+        </div>
+        
+        <!-- Steps Section -->
+        <div class="steps-section">
+            <h3>3 Simple Steps to Virtually Adopt</h3>
+            <div class="steps-container">
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <p>Choose a pet from our Virtual Adoption Gallery.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <p>Select a support plan that suits you.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <p>Enjoy regular updates, photos, and video calls with your pet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Find Your Perfect Pet Section -->
+<section class="find-pet-container">
+    <h2>🐾 Find Your Perfect Pet 🐾</h2>
+    <p>Answer a few questions and let us help you find the best pet companion for you!</p>
+
+    <!-- Step-by-Step Pet Match Quiz -->
+    <div class="quiz-container">
+        <div class="quiz-step active" id="step1">
+            <h3>🏡 What is your living space like?</h3>
+            <button onclick="nextStep('small')">Small Apartment</button>
+            <button onclick="nextStep('medium')">Medium-Sized Home</button>
+            <button onclick="nextStep('large')">Large House with Yard</button>
+        </div>
+
+        <div class="quiz-step" id="step2">
+            <h3>🕒 How much time can you dedicate?</h3>
+            <button onclick="nextStep('low')">A Few Hours a Week</button>
+            <button onclick="nextStep('medium-time')">A Few Hours a Day</button>
+            <button onclick="nextStep('high')">I’m Home Most of the Time</button>
+        </div>
+
+        <div class="quiz-step" id="step3">
+            <h3>🚶‍♂️ How active are you?</h3>
+            <button onclick="showResult('low-energy')">I Prefer a Relaxed Lifestyle</button>
+            <button onclick="showResult('moderate-energy')">I Go for Walks & Light Exercise</button>
+            <button onclick="showResult('high-energy')">I’m Very Active & Outdoorsy</button>
+        </div>
+    </div>
+
+    <!-- Result Display -->
+    <div id="result" class="result-container">
+        <h3>🎉 Your Perfect Pet Match: <span id="pet-match"></span> 🎉</h3>
+        <p id="pet-description"></p>
+        <button onclick="restartQuiz()">Try Again</button>
+    </div>
+</section>
+
+<script>
+    let currentStep = 1;
+
+function nextStep(answer) {
+    document.getElementById(step`${currentStep}`).classList.remove('active');
+    currentStep++;
+    if (currentStep <= 3) {
+        document.getElementById(step`${currentStep}`).classList.add('active');
+    } else {
+        showResult(answer);
+    }
+}
+
+function showResult(answer) {
+    let petMatch = "";
+    let petDescription = "";
+
+    if (answer === "low-energy") {
+        petMatch = "🐱 Cat";
+        petDescription = "Cats are independent and require minimal effort. Perfect for someone with a relaxed lifestyle!";
+    } else if (answer === "moderate-energy") {
+        petMatch = "🐶 Small Dog";
+        petDescription = "A small dog is great for walks and cuddles. They need moderate attention and are great companions!";
+    } else if (answer === "high-energy") {
+        petMatch = "🐕 Large Dog";
+        petDescription = "A large, active dog is perfect for you! They love outdoor adventures and need an energetic owner!";
+    }
+
+    document.getElementById("pet-match").innerText = petMatch;
+    document.getElementById("pet-description").innerText = petDescription;
+    document.getElementById("result").style.display = "block";
+}
+
+function restartQuiz() {
+    document.getElementById("result").style.display = "none";
+    currentStep = 1;
+    document.getElementById("step1").classList.add("active");
+}
+</script>
+</body>
+</html>
