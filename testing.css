@@ -389,7 +389,6 @@ body {
     padding: 80px 10%;
     text-align: center;
     position: relative;
-    clip-path: path("M0,100 Q50,150 100,100 T200,100 T300,100 T400,100 T500,100 T600,100 T700,100 T800,100 T900,100 T1000,100 T1100,100 T1200,100 T1300,100 T1400,100 T1500,100 L1500,400 L0,400 Z");
 }
 
 
