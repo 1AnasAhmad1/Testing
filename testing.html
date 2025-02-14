@@ -4,137 +4,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inconsolata:wght@200..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="testing.css">
     <title>Document</title>
 </head>
 
-<body>    
+<body>
     <nav class="navbar">
         <div class="logo">
-            <span style="font-size: 28px;">&#128062;</span>
             <h1>
                 PET<img src="images/Petopia_Name_Logo.png" alt="Petopia" class="logo">PiA
             </h1>
         </div>
         <div class="nav-links">
-            <a href="#" class="active">Home</a>
+            <a href="index.html" class="active">Home</a>
             <a href="#">Adopt</a>
             <a href="#">Virtual Adoption</a>
         </div>
     </nav>
-    
-    <!-- Categories Section -->
-    <section class="categories">
-        <h2>Find Your Perfect Pet</h2>
-        <p>Explore different categories and find your new best friend.</p>
 
-        <div class="category-container">
-            <div class="category">
-                <img src="images/dog-adopt.jpg" alt="Dogs">
-                <h3>Dogs</h3>
-                <p>Find loyal and loving dogs looking for a forever home.</p>
-                <button class="btn-secondary">View Dogs</button>
+    <section class="adoption-banner">
+        <div class="banner-content">
+            <h1>🐾 Find Your Perfect Companion 🐾</h1>
+            <p>Adopt a pet and give them a loving home. Browse through our available pets and start your journey today!
+            </p>
+            <button class="browse-btn">Browse Pet</button>
+        </div>
+        <img src="/images2/Dog_Hero.png" alt="Dog" class="dog-image">
+    </section>
+
+    <section class="perfect-pet">
+        <h2 class="section-title">Find Your <span>Perfect Pet</span></h2>
+        <div class="pet-container">
+            <div class="pet-card" style="--clr:#7D3C98;">
+                <img src="/images2/Dog_Hero2.jpg" alt="Dog">
+                <h3>Golden Retriever</h3>
+                <p>Friendly, playful, and loving. Perfect for families!</p>
+                <button class="adopt-btn">Adopt Now</button>
             </div>
-
-            <div class="category">
-                <img src="images/cat-adopt.jpg" alt="Cats">
-                <h3>Cats</h3>
-                <p>Adopt adorable cats and give them a second chance.</p>
-                <button class="btn-secondary">View Cats</button>
+            <div class="pet-card" style="--clr:#8b6b6b;">
+                <img src="/images2/Cat_Hero2.jpg" alt="Cat">
+                <h3>Maine Coon</h3>
+                <p>Independent but affectionate. Loves cuddles!</p>
+                <button class="adopt-btn">Adopt Now</button>
             </div>
-
-            <div class="category">
-                <img src="images/bird-adopt.jpg" alt="Birds">
-                <h3>Birds</h3>
-                <p>Colorful and chirpy birds are waiting for a loving home.</p>
-                <button class="btn-secondary">View Birds</button>
-            </div>
-
-            <div class="category">
-                <img src="images/rabbit-adopt.jpg" alt="Rabbits">
-                <h3>Rabbits</h3>
-                <p>Playful and adorable rabbits ready for adoption.</p>
-                <button class="btn-secondary">View Rabbits</button>
-            </div>
-
-            <div class="category">
-                <img src="images/reptile-adopt.jpg" alt="Reptiles">
-                <h3>Reptiles</h3>
-                <p>Find unique reptiles looking for responsible owners.</p>
-                <button class="btn-secondary">View Reptiles</button>
-            </div>
-
-            <div class="category">
-                <img src="images/small-pet-adopt.jpg" alt="Small Pets">
-                <h3>Small Pets</h3>
-                <p>Hamsters, guinea pigs, and more small pets available.</p>
-                <button class="btn-secondary">View Small Pets</button>
+            <div class="pet-card" style="--clr:#7D3C98;">
+                <img src="/images2/Rabbit_Hero2.jpg" alt="Rabbit">
+                <h3>Holland Lop</h3>
+                <p>Soft, gentle, and low maintenance. Great for kids!</p>
+                <button class="adopt-btn">Adopt Now</button>
             </div>
         </div>
-
-        <button class="btn-primary view-all">View All</button>
     </section>
 
 
+    <!-- Adoption Path Section -->
+    <section class="adoption-path">
+        <h2>🐾 The Journey of Pet Adoption</h2>
+        <p>Adopting a pet is a beautiful commitment. Follow this path to ensure you're ready for a new furry friend!</p>
 
-
-
-    <!-- Adoption Note Section -->
-    <section class="adoption-note">
-        <div class="note-container">
-            <h2>🐾 Understanding Pet Adoption</h2>
-            <p class="quote">"Adoption is not just about finding a pet; it’s about changing lives, theirs and
-                yours." </p>
-
-            <div class="note-content">
-                <div class="note-text">
-                    <h3>Why Adopt?</h3>
-                    <p>
-                        Adopting a pet is a life-changing decision, both for you and the pet you bring home. Every
-                        year,
-                        millions of animals end up in shelters, longing for love and companionship. Adoption gives
-                        these
-                        animals a second chance at life, providing them with a warm home and a loving family.
-                    </p>
-
-                    <h3>Adoption Readiness</h3>
-                    <p>
-                        Before adopting, it's important to assess your lifestyle, living conditions, and commitment
-                        level.
-                        A pet requires time, attention, and proper care. Ask yourself:
-                    </p>
-                    <ul>
-                        <li>Do I have enough time to care for a pet?</li>
-                        <li>Can I afford pet food, vet bills, and other expenses?</li>
-                        <li>Is my home pet-friendly and safe?</li>
-                        <li>Am I ready for a long-term commitment (some pets live 10-20 years)?</li>
-                    </ul>
-
-                    <h3>How to Prepare for a New Pet</h3>
-                    <p>
-                        Bringing a pet home requires some preparation. Make sure you have:
-                    </p>
-                    <ul>
-                        <li>🐾 A cozy bed and a safe space for your pet.</li>
-                        <li>🐾 Food and water bowls suited to their needs.</li>
-                        <li>🐾 Initial vet checkup scheduled.</li>
-                        <li>🐾 Patience and love as they adjust to their new home.</li>
-                    </ul>
-                </div>
-
-                <div class="note-image">
-                    <img src="images/adoption-note.jpg" alt="Adopting a pet">
+        <div class="timeline">
+            <div class="timeline-step">
+                <div class="circle">1</div>
+                <div class="content">
+                    <h3>Understanding Responsibility</h3>
+                    <p>Adopting a pet is a lifetime commitment. Be ready for daily care, expenses, and unconditional
+                        love.</p>
                 </div>
             </div>
 
-            <button class="btn-primary">Start Your Adoption Journey</button>
+            <div class="timeline-step">
+                <div class="circle">2</div>
+                <div class="content">
+                    <h3>Choosing the Right Pet</h3>
+                    <p>Each pet has unique needs and personalities. Find one that matches your lifestyle.</p>
+                </div>
+            </div>
+
+            <div class="timeline-step">
+                <div class="circle">3</div>
+                <div class="content">
+                    <h3>Preparing Your Home</h3>
+                    <p>Make sure your home is safe and comfortable. Have food, toys, and a cozy space ready.</p>
+                </div>
+            </div>
+
+            <div class="timeline-step">
+                <div class="circle">4</div>
+                <div class="content">
+                    <h3>The Adoption Process</h3>
+                    <p>Fill out the application, meet your new friend, and complete the formalities with the shelter.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-step">
+                <div class="circle">5</div>
+                <div class="content">
+                    <h3>Building a Bond</h3>
+                    <p>Give your pet time to adjust. Love, patience, and consistency will create a lifelong friendship.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Virtual Adoption Section -->
     <section class="virtual-adoption">
         <div class="container">
-            <h2 class="section-title">🐾 Virtual Adoption - A Heartfelt Connection</h2>
+            <h2 class="section-title">🐾Virtual Adoption - A Heartfelt Connection🐾</h2>
 
             <div class="adoption-intro">
                 <p>
@@ -149,23 +131,23 @@
                 <h3>Meet Your Virtual Pets</h3>
                 <div class="pets-container">
                     <div class="pet-card">
-                        <img src="/Test 1/Cat.jpg" alt="Luna">
+                        <img src="\images2\Kitten_Hero3.jpg" alt="Luna">
                         <h4>Luna 🐾</h4>
                         <p>A rescued kitten who loves playing with toy mice. She needs a virtual family!</p>
                         <button class="btn-adopt">Adopt Luna</button>
                     </div>
 
                     <div class="pet-card">
-                        <img src="/Test 1/Cat.jpg" alt="Max">
+                        <img src="\images2\Dog_Hero3.jpg" alt="Max">
                         <h4>Max 🐾</h4>
                         <p>A senior dog recovering from surgery. Your love can help him heal!</p>
                         <button class="btn-adopt">Adopt Max</button>
                     </div>
 
                     <div class="pet-card">
-                        <img src="/Test 1/Cat.jpg" alt="Daisy">
+                        <img src="\images2\Parrot_hero3.jpg" alt="Daisy">
                         <h4>Daisy 🐾</h4>
-                        <p>A rescued bunny who loves carrots and cuddles. Give her a virtual home!</p>
+                        <p>A rescued parrot who loves to chatter and sing. Give her a virtual home!</p>
                         <button class="btn-adopt">Adopt Daisy</button>
                     </div>
                 </div>
@@ -175,7 +157,7 @@
 
     <section class="rescue-documentary">
         <div class="container">
-            <h2 class="section-title">🐾 Heartwarming Rescue Stories</h2>
+            <h2 class="section-title">🐾Heartwarming Rescue Stories🐾</h2>
             <p class="intro-text">
                 Every rescued pet has a story of survival, love, and hope. These touching tales highlight the
                 resilience of animals and the kindness of those who save them. Read their journeys and become
@@ -190,66 +172,50 @@
             <!-- Enhanced Slider -->
             <div class="slider-container">
                 <div class="slider-content">
-                    <!-- Slide 1 -->
                     <div class="slide">
                         <div class="story-card">
-                            <img src="images/rescue1.jpg" alt="Bella the Rescued Puppy">
-                            <h3>Bella: A New Beginning</h3>
-                            <p>
-                                Bella was found trembling in the rain, abandoned and alone. Her tiny frame showed signs
-                                of
-                                malnourishment, and trust in humans seemed broken. But after weeks of love, patience,
-                                and care,
-                                Bella finally found her forever home—where she now enjoys belly rubs and sunny afternoon
-                                naps.
-                            </p>
+                            <img src="\images2\Dog_Hero5.jpg" alt="Bella the Rescued Puppy">
+                            <span class="div-flex">                                
+                                <h3>Bella: A New Beginning</h3>
+                                <p>Bella was found trembling in the rain, abandoned and alone. With love and care, she now
+                                    enjoys belly rubs and sunny naps.</p>
+                                </span>
                         </div>
                     </div>
 
-                    <!-- Slide 2 -->
                     <div class="slide">
                         <div class="story-card">
-                            <img src="images/rescue2.jpg" alt="Leo the Survivor">
+                            <img src="\images2\Dog2_Hero5.jpg" alt="Leo the Survivor">
+                            <span class="div-flex"> 
                             <h3>Leo: Learning to Trust Again</h3>
-                            <p>
-                                Leo was once a stray, wary of people and fearful of affection. He spent his days hiding,
-                                unsure of his
-                                place in the world. But with the dedication of a kind rescuer, Leo learned that not all
-                                humans hurt—some heal.
-                                Today, he is a playful, loving pet who greets everyone with a wagging tail.
-                            </p>
+                            <p>Leo, once a fearful stray, learned to trust again with the help of a kind rescuer. Today,
+                                he greets everyone with a wagging tail.</p>
+                            </span>
                         </div>
                     </div>
 
-                    <!-- Slide 3 -->
                     <div class="slide">
                         <div class="story-card">
-                            <img src="images/rescue3.jpg" alt="Daisy the Brave Kitten">
+                            <img src="\images2\Cat_Hero5.jpg" alt="Daisy the Brave Kitten">
+                            <span class="div-flex"> 
                             <h3>Daisy: A Fighter’s Journey</h3>
-                            <p>
-                                Daisy was left on the streets as a newborn kitten, struggling to survive. A kind-hearted
-                                rescuer
-                                found her weak and hungry. After months of care and warmth, Daisy grew into a lively,
-                                affectionate
-                                cat who now enjoys her days chasing butterflies in her new loving home.
-                            </p>
+                            <p>Rescued as a weak kitten, Daisy now thrives in her loving home, enjoying days of playful
+                                curiosity.</p>
+                                </span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Navigation Buttons -->
-                <button class="prev">&#10094;</button>
-                <button class="next">&#10095;</button>
+                <button class="nav-button prev">&#10094;</button>
+                <button class="nav-button next">&#10095;</button>
             </div>
 
             <!-- Dotted Navigation -->
-            <div class="dots-container">
-                <span class="dot" onclick="moveToSlide(0)"></span>
-                <span class="dot" onclick="moveToSlide(1)"></span>
-                <span class="dot" onclick="moveToSlide(2)"></span>
-            </div>
+            <div class="dots-container"></div>
         </div>
     </section>
+
 
     <section class="adoption-success">
         <div class="container">
@@ -309,12 +275,12 @@
         <div class="container">
             <h2 class="section-title">🐾 Every Adoption is a Story of Love</h2>
             <p class="intro-text">
-                Some pets wait years for a home. Others are given up too soon. But every adoption is a victory— 
+                Some pets wait years for a home. Others are given up too soon. But every adoption is a victory—
                 a story of resilience, hope, and second chances. Let’s meet the souls who found their forever homes.
             </p>
-    
+
             <!-- Unique Design for Each Success Story -->
-            
+
             <!-- Story 1 -->
             <div class="adoption-story left">
                 <div class="story-image">
@@ -324,21 +290,22 @@
                 <div class="story-content">
                     <h3>Luna: From Fear to Forever</h3>
                     <p>
-                        When Luna was rescued, she wouldn't even lift her head. She had never known kindness.  
-                        Then Sarah adopted her. Slowly, Luna learned what love meant. "The first time she wagged her tail, I cried," Sarah says.  
-                        Today, Luna wakes up in a warm bed, surrounded by love.  
+                        When Luna was rescued, she wouldn't even lift her head. She had never known kindness.
+                        Then Sarah adopted her. Slowly, Luna learned what love meant. "The first time she wagged her
+                        tail, I cried," Sarah says.
+                        Today, Luna wakes up in a warm bed, surrounded by love.
                     </p>
                     <span class="read-more">Read Full Story →</span>
                 </div>
             </div>
-    
+
             <!-- Story 2 -->
             <div class="adoption-story right">
                 <div class="story-content">
                     <h3>Max: A Fighter’s Heart</h3>
                     <p>
-                        Max was found in the cold, his ribs visible under his fur. He had been surviving alone,  
-                        but he never lost his spirit. When the Thompson family took him in, he finally felt safe.  
+                        Max was found in the cold, his ribs visible under his fur. He had been surviving alone,
+                        but he never lost his spirit. When the Thompson family took him in, he finally felt safe.
                         “He stopped shaking when I held him,” says Mrs. Thompson. "That’s when I knew—he was home."
                     </p>
                     <span class="read-more">Read Full Story →</span>
@@ -348,7 +315,7 @@
                     <img src="images/max-after.jpg" alt="Max After">
                 </div>
             </div>
-    
+
             <!-- Story 3 -->
             <div class="adoption-story center">
                 <div class="story-image-large">
@@ -358,15 +325,15 @@
                 <div class="story-content">
                     <h3>Bella: Love Heals Everything</h3>
                     <p>
-                        Bella was abandoned near a gas station, waiting for someone who would never return.  
-                        She was so weak she could barely walk. But Jack stopped for her.  
-                        "She put her paw on my hand, and I knew she trusted me," he says.  
+                        Bella was abandoned near a gas station, waiting for someone who would never return.
+                        She was so weak she could barely walk. But Jack stopped for her.
+                        "She put her paw on my hand, and I knew she trusted me," he says.
                         Now, Bella is the happiest dog—always running to greet Jack at the door.
                     </p>
                     <span class="read-more">Read Full Story →</span>
                 </div>
             </div>
-    
+
             <!-- Emotional Call to Action -->
             <div class="cta-box">
                 <p>“Thousands of pets are still waiting for their happy ending. Could you be their hero?”</p>
@@ -377,8 +344,9 @@
 
     <section class="adoption-stats">
         <h2 class="section-title">🐾 Our Adoption Impact</h2>
-        <p class="intro-text">Each number represents a life saved, a home found, and a heart warmed. Together, we make a difference.</p>
-    
+        <p class="intro-text">Each number represents a life saved, a home found, and a heart warmed. Together, we make a
+            difference.</p>
+
         <div class="stats-grid">
             <div class="stat-item">
                 <h3 class="counter" data-target="850">0</h3>
@@ -399,37 +367,41 @@
         </div>
     </section>
 
-    <section class="adoption-path">
+    <section class="adoption-path1">
         <h2 class="section-title">🐾 Your Adoption Journey</h2>
-        <p class="intro-text">Follow this structured path and take a step closer to unconditional love! Each step ensures a smooth adoption process.</p>
-    
+        <p class="intro-text">Follow this structured path and take a step closer to unconditional love! Each step
+            ensures a smooth adoption process.</p>
+
         <div class="path-container">
             <div class="progress-line"></div>
-    
+
             <div class="step step-left">
                 <div class="step-icon">1</div>
                 <div class="step-content">
                     <h3>Find Your Perfect Match</h3>
-                    <p>Explore our pet listings, view detailed profiles, and find a furry friend that matches your lifestyle.</p>
+                    <p>Explore our pet listings, view detailed profiles, and find a furry friend that matches your
+                        lifestyle.</p>
                 </div>
             </div>
-    
+
             <div class="step step-right">
                 <div class="step-icon">2</div>
                 <div class="step-content">
                     <h3>Submit an Adoption Application</h3>
-                    <p>Fill out a quick form to share details about your home and lifestyle. This helps ensure a perfect match.</p>
+                    <p>Fill out a quick form to share details about your home and lifestyle. This helps ensure a perfect
+                        match.</p>
                 </div>
             </div>
-    
+
             <div class="step step-left">
                 <div class="step-icon">3</div>
                 <div class="step-content">
                     <h3>Meet & Greet</h3>
-                    <p>Connect with your chosen pet via a virtual meet-up or in-person visit. It’s the perfect way to bond before adoption!</p>
+                    <p>Connect with your chosen pet via a virtual meet-up or in-person visit. It’s the perfect way to
+                        bond before adoption!</p>
                 </div>
             </div>
-    
+
             <div class="step step-right">
                 <div class="step-icon">4</div>
                 <div class="step-content">
@@ -437,7 +409,7 @@
                     <p>Our team will do a quick home check to ensure a safe and loving environment for your new pet.</p>
                 </div>
             </div>
-    
+
             <div class="step step-left">
                 <div class="step-icon">5</div>
                 <div class="step-content">
@@ -445,66 +417,96 @@
                     <p>Sign the adoption agreement and receive your pet’s vaccination records and a welcome kit.</p>
                 </div>
             </div>
-    
+
             <div class="step step-right">
                 <div class="step-icon">6</div>
                 <div class="step-content">
                     <h3>Welcome Home!</h3>
-                    <p>Your pet officially joins your family! Receive post-adoption support, training tips, and connect with our community.</p>
+                    <p>Your pet officially joins your family! Receive post-adoption support, training tips, and connect
+                        with our community.</p>
                 </div>
             </div>
         </div>
     </section>
 
-<!-- Joke Section -->
-<section class="joke-section">
-    <p class="joke-text" id="joke-text">😂 Loading a joke...</p>
-</section>
+    <!-- Joke Section -->
+    <section class="joke-section">
+        <p class="joke-text" id="joke-text">😂 Loading a joke...</p>
+    </section>
 
-<!-- Footer Section -->
-<footer class="site-footer">
-    <div class="footer-container">
-        <div class="footer-section">
-            <h3>About Petopia</h3>
-            <p>Your go-to platform for pet adoption, rescue stories, and virtual adoption. Because every pet deserves a loving home! 🐾</p>
-        </div>
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Petopia</h3>
+                <p>Your go-to platform for pet adoption, rescue stories, and virtual adoption. Because every pet
+                    deserves a loving home! 🐾</p>
+            </div>
 
-        <div class="footer-section">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="#">Adopt a Pet</a></li>
-                <li><a href="#">Virtual Adoption</a></li>
-                <li><a href="#">Rescue Stories</a></li>
-                <li><a href="#">Success Stories</a></li>
-            </ul>
-        </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Adopt a Pet</a></li>
+                    <li><a href="#">Virtual Adoption</a></li>
+                    <li><a href="#">Rescue Stories</a></li>
+                    <li><a href="#">Success Stories</a></li>
+                </ul>
+            </div>
 
-        <div class="footer-section">
-            <h3>Stay Connected</h3>
-            <p>Follow us on social media for the latest adoption updates!</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+            <div class="footer-section">
+                <h3>Stay Connected</h3>
+                <p>Follow us on social media for the latest adoption updates!</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="footer-bottom">
-        <p>© 2025 Petopia | Bringing Paws & People Together</p>
-    </div>
-</footer>
+        <div class="footer-bottom">
+            <p>© 2025 Petopia | Bringing Paws & People Together</p>
+        </div>
+    </footer>
 
     <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const petCards = document.querySelectorAll(".pet-card");
+
+            petCards.forEach(card => {
+                card.addEventListener("mouseenter", () => {
+                    card.style.transform = "scale(1.05)";
+                    card.style.boxShadow = "0 10px 20px rgba(0,0,0,0.2)";
+                });
+
+                card.addEventListener("mouseleave", () => {
+                    card.style.transform = "scale(1)";
+                    card.style.boxShadow = "0 5px 15px rgba(0,0,0,0.1)";
+                });
+            });
+        });
+
         document.addEventListener("DOMContentLoaded", function () {
             const slider = document.querySelector(".slider-content");
             const slides = document.querySelectorAll(".slide");
             const prevButton = document.querySelector(".prev");
             const nextButton = document.querySelector(".next");
-            const dots = document.querySelectorAll(".dot");
+            const dotsContainer = document.querySelector(".dots-container");
 
             let currentIndex = 0;
             const totalSlides = slides.length;
+            let autoSlide;
+
+            // Generate dots dynamically
+            slides.forEach((_, index) => {
+                const dot = document.createElement("span");
+                dot.classList.add("dot");
+                dot.dataset.index = index;
+                dotsContainer.appendChild(dot);
+            });
+
+            const dots = document.querySelectorAll(".dot");
+            dots[0].classList.add("active"); // Set initial active dot
 
             function updateSliderPosition() {
                 slider.style.transform = `translateX(-${currentIndex * 100}%)`;
@@ -512,34 +514,45 @@
                 dots[currentIndex].classList.add("active");
             }
 
+            function moveToSlide(index) {
+                currentIndex = index;
+                updateSliderPosition();
+                resetAutoSlide();
+            }
+
             nextButton.addEventListener("click", function () {
                 currentIndex = (currentIndex + 1) % totalSlides;
                 updateSliderPosition();
+                resetAutoSlide();
             });
 
             prevButton.addEventListener("click", function () {
                 currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
                 updateSliderPosition();
+                resetAutoSlide();
             });
 
-            // Dot Navigation
-            function moveToSlide(index) {
-                currentIndex = index;
-                updateSliderPosition();
-            }
-
-            dots.forEach((dot, index) => {
+            dots.forEach(dot => {
                 dot.addEventListener("click", function () {
-                    moveToSlide(index);
+                    moveToSlide(parseInt(this.dataset.index));
                 });
             });
 
-            // Auto-slide every 5 seconds
-            setInterval(() => {
-                currentIndex = (currentIndex + 1) % totalSlides;
-                updateSliderPosition();
-            }, 5000);
+            function startAutoSlide() {
+                autoSlide = setInterval(() => {
+                    currentIndex = (currentIndex + 1) % totalSlides;
+                    updateSliderPosition();
+                }, 5000);
+            }
+
+            function resetAutoSlide() {
+                clearInterval(autoSlide);
+                startAutoSlide();
+            }
+
+            startAutoSlide(); // Start auto-sliding initially
         });
+
 
         const stories = {
             story1: {
@@ -568,15 +581,15 @@
 
         document.addEventListener("DOMContentLoaded", () => {
             const counters = document.querySelectorAll(".counter");
-        
+
             counters.forEach(counter => {
                 counter.innerText = "0";
-        
+
                 const updateCounter = () => {
                     const target = +counter.getAttribute("data-target");
                     const count = +counter.innerText;
                     const increment = target / 100;
-        
+
                     if (count < target) {
                         counter.innerText = `${Math.ceil(count + increment)}`;
                         setTimeout(updateCounter, 20);
@@ -584,14 +597,14 @@
                         counter.innerText = target;
                     }
                 };
-        
+
                 updateCounter();
             });
         });
 
         document.addEventListener("DOMContentLoaded", () => {
             const steps = document.querySelectorAll(".step");
-        
+
             const revealSteps = () => {
                 const triggerBottom = window.innerHeight * 0.85;
                 steps.forEach(step => {
@@ -601,27 +614,27 @@
                     }
                 });
             };
-        
+
             window.addEventListener("scroll", revealSteps);
             revealSteps();
         });
 
-          // List of refreshing pet jokes
-    const jokes = [
-    "😂 Why don’t cats play poker in the wild? <br><strong>Because there are too many cheetahs! 🐆</strong>",
-    "😂 Why did the dog sit in the shade? <br><strong>Because he didn’t want to be a hot dog! 🌭🐶</strong>",
-    "😂 What do you call a pile of kittens? <br><strong>A meow-tain! ⛰️🐱</strong>",
-    "😂 Why do cows have hooves instead of feet? <br><strong>Because they lactose! 🥛🐄</strong>",
-    "😂 Why did the fish blush? <br><strong>Because it saw the ocean’s bottom! 🌊🐟</strong>",
-    "😂 Why did the dog bring a clock to the vet? <br><strong>Because he wanted more ‘paws’ in time! ⏳🐾</strong>",
-    "😂 What do you get when you cross a dog with a phone? <br><strong>A Golden Receiver! 📞🐕</strong>",
-    "😂 What kind of dog loves car racing? <br><strong>A lap dog! 🏎️🐶</strong>",
-    "😂 What do you call a smart cat? <br><strong>A purr-fessor! 🎓🐱</strong>",
-    "😂 Why did the squirrel adopt a pet parrot? <br><strong>Because he wanted a nutty buddy! 🥜🦜</strong>"
-];
+        // List of refreshing pet jokes
+        const jokes = [
+            "😂 Why don’t cats play poker in the wild? <br><strong>Because there are too many cheetahs! 🐆</strong>",
+            "😂 Why did the dog sit in the shade? <br><strong>Because he didn’t want to be a hot dog! 🌭🐶</strong>",
+            "😂 What do you call a pile of kittens? <br><strong>A meow-tain! ⛰️🐱</strong>",
+            "😂 Why do cows have hooves instead of feet? <br><strong>Because they lactose! 🥛🐄</strong>",
+            "😂 Why did the fish blush? <br><strong>Because it saw the ocean’s bottom! 🌊🐟</strong>",
+            "😂 Why did the dog bring a clock to the vet? <br><strong>Because he wanted more ‘paws’ in time! ⏳🐾</strong>",
+            "😂 What do you get when you cross a dog with a phone? <br><strong>A Golden Receiver! 📞🐕</strong>",
+            "😂 What kind of dog loves car racing? <br><strong>A lap dog! 🏎️🐶</strong>",
+            "😂 What do you call a smart cat? <br><strong>A purr-fessor! 🎓🐱</strong>",
+            "😂 Why did the squirrel adopt a pet parrot? <br><strong>Because he wanted a nutty buddy! 🥜🦜</strong>"
+        ];
 
-// Select a random joke and insert it into the page
-document.getElementById("joke-text").innerHTML = jokes[Math.floor(Math.random() * jokes.length)];
+        // Select a random joke and insert it into the page
+        document.getElementById("joke-text").innerHTML = jokes[Math.floor(Math.random() * jokes.length)];
     </script>
 </body>
 
