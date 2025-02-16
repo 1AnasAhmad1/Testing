@@ -37,6 +37,12 @@
         <img src="images2/Hero_Dog1.jpg" alt="Dog" class="dog-image">
     </section>
 
+    <div class="divider">
+        <div class="divider-line"></div>
+        <img src="images/paw.png" alt="Paw Print" class="paw-print">
+        <div class="divider-line"></div>
+    </div>
+
     <section class="perfect-pet">
         <h2 class="section-title">Find Your <span>Perfect Pet</span></h2>
         <div class="pet-container">
@@ -67,6 +73,8 @@
             <button class="view-btn">View All</button>
         </div>
     </section>
+
+
 
     <section class="adoption-note">
         <h2>🐾Why Pet Adoption Matters🐾</h2>
@@ -103,12 +111,6 @@
     <section class="rescue-documentary">
         <div class="container">
             <h2 class="section-title">🐾Heartwarming Rescue Stories🐾</h2>
-            <p class="intro-text">
-                Every rescued pet has a story of survival, love, and hope. These touching tales highlight the
-                resilience of animals and the kindness of those who save them. Read their journeys and become
-                part of their story by choosing adoption.
-            </p>
-
             <!-- Quote Section -->
             <div class="quote-box1">
                 <p>“Saving one pet won’t change the world, but for that pet, the world changes forever.”</p>
@@ -122,7 +124,15 @@
                             <img src="images2\Cow_Hero2.jpg" alt="Bella the Rescued Puppy">
                             <span class="div-flex">
                                 <h3>Daisy’s New Beginning – The Rescued Cow</h3>
-                                <p>Daisy had spent her early life in a crowded dairy farm, never knowing kindness. She was weak and exhausted, her spirit fading with each passing day. Just when her fate seemed sealed, an animal sanctuary rescued her, offering her a second chance. At first, Daisy was hesitant, unsure if she could trust humans again. Then she met Emily, a compassionate volunteer who saw the gentle soul behind Daisy’s fearful eyes. Emily adopted her, bringing her to a farm where she could roam freely, bask in the sun, and receive the love she had never known. Today, Daisy enjoys lazy afternoons under the open sky, playful head nudges, and the warmth of a family that adores her.</p>
+                                <p>Daisy had spent her early life in a crowded dairy farm, never knowing kindness. She
+                                    was weak and exhausted, her spirit fading with each passing day. Just when her fate
+                                    seemed sealed, an animal sanctuary rescued her, offering her a second chance. At
+                                    first, Daisy was hesitant, unsure if she could trust humans again. Then she met
+                                    Emily, a compassionate volunteer who saw the gentle soul behind Daisy’s fearful
+                                    eyes. Emily adopted her, bringing her to a farm where she could roam freely, bask in
+                                    the sun, and receive the love she had never known. Today, Daisy enjoys lazy
+                                    afternoons under the open sky, playful head nudges, and the warmth of a family that
+                                    adores her.</p>
                             </span>
                         </div>
                     </div>
@@ -132,7 +142,15 @@
                             <img src="images2\Rabbit_Hero2.jpg" alt="Leo the Survivor">
                             <span class="div-flex">
                                 <h3>Clover, the Rabbit Who Found a Forever Home</h3>
-                                <p>Clover, a tiny white rabbit, had been abandoned in a cardboard box outside a pet store, shivering in fear. When Mia, a college student, discovered her, she knew she couldn’t walk away. She brought Clover home, offering her warmth, fresh food, and a safe place to heal. At first, Clover was timid, hiding away in corners, unsure of her new surroundings. But with gentle care and endless love, she began to trust again. Now, she hops happily around Mia’s apartment, nudging her hand for treats and curling up beside her during quiet evenings. What started as a rescue turned into an unbreakable friendship, proving that love can turn even the smallest creatures into the happiest souls.</p>
+                                <p>Clover, a tiny white rabbit, had been abandoned in a cardboard box outside a pet
+                                    store, shivering in fear. When Mia, a college student, discovered her, she knew she
+                                    couldn’t walk away. She brought Clover home, offering her warmth, fresh food, and a
+                                    safe place to heal. At first, Clover was timid, hiding away in corners, unsure of
+                                    her new surroundings. But with gentle care and endless love, she began to trust
+                                    again. Now, she hops happily around Mia’s apartment, nudging her hand for treats and
+                                    curling up beside her during quiet evenings. What started as a rescue turned into an
+                                    unbreakable friendship, proving that love can turn even the smallest creatures into
+                                    the happiest souls.</p>
                             </span>
                         </div>
                     </div>
@@ -142,7 +160,15 @@
                             <img src="images2\Parrot_hero3.jpg" alt="Daisy the Brave Kitten">
                             <span class="div-flex">
                                 <h3>A Sky Full of Love – Blue’s Journey to Freedom</h3>
-                                <p>Blue, a delicate parakeet with vibrant feathers, had spent his life in a small cage, his wings never fully stretched. Neglected by his previous owners, he had forgotten the joy of flying, his songs fading into silence. When David, a bird enthusiast, adopted him, he promised Blue a life filled with love and freedom. Day by day, David earned Blue’s trust, encouraging him to fly in a spacious aviary filled with sunlight and gentle breezes. One day, Blue finally spread his wings and soared, his melody returning with newfound happiness. Now, he greets every morning with cheerful chirps, no longer a prisoner but a beloved companion whose spirit soars as high as the sky.</p>
+                                <p>Blue, a delicate parakeet with vibrant feathers, had spent his life in a small cage,
+                                    his wings never fully stretched. Neglected by his previous owners, he had forgotten
+                                    the joy of flying, his songs fading into silence. When David, a bird enthusiast,
+                                    adopted him, he promised Blue a life filled with love and freedom. Day by day, David
+                                    earned Blue’s trust, encouraging him to fly in a spacious aviary filled with
+                                    sunlight and gentle breezes. One day, Blue finally spread his wings and soared, his
+                                    melody returning with newfound happiness. Now, he greets every morning with cheerful
+                                    chirps, no longer a prisoner but a beloved companion whose spirit soars as high as
+                                    the sky.</p>
                             </span>
                         </div>
                     </div>
@@ -234,7 +260,7 @@
 
             <!-- Story 3 -->
             <div class="adoption-story left">
-                <div class="story-image">
+                <div class="story-image-large">
                     <img src="images2\Dog_Before_2.jpeg" alt="Bella Before">
                     <img src="images2\Dog_After_2.jpeg" alt="Bella After">
                 </div>
@@ -250,10 +276,20 @@
                 </div>
             </div>
 
+            <!-- Modal Structure -->
+            <div id="story-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3 id="modal-title"></h3>
+                    <p id="modal-text"></p>
+                </div>
+            </div>
+
+
             <!-- Emotional Call to Action -->
             <div class="cta-box">
                 <p>“Thousands of pets are still waiting for their happy ending. Could you be their hero?”</p>
-                <a href="adopt.html" class="adopt-btn">Find Your Forever Friend</a>
+                <a href="adopt.html">Find Your Forever Friend</a>
             </div>
         </div>
     </section>
@@ -366,7 +402,7 @@
 
             <div class="step step-right">
                 <div class="step-icon">6</div>
-                <div class="step-content">
+                <div class="step-content step_mid">
                     <h3>Welcome Home!</h3>
                 </div>
             </div>
@@ -495,7 +531,7 @@
             }
 
             startAutoSlide(); // Start auto-sliding initially
-        });    
+        });
 
         document.addEventListener("DOMContentLoaded", () => {
             const steps = document.querySelectorAll(".step");
@@ -529,11 +565,45 @@
         ];
 
         document.addEventListener("DOMContentLoaded", () => {
-            const counters = document.querySelectorAll(".counter");
+            const readMoreButtons = document.querySelectorAll(".read-more");
+            const modal = document.getElementById("story-modal");
+            const modalTitle = document.getElementById("modal-title");
+            const modalText = document.getElementById("modal-text");
+            const closeModal = document.querySelector(".close");
         
+            const stories = {
+                "Luna: From Fear to Forever": "Luna was abandoned and terrified of humans. With patience and love, she blossomed into a playful and affectionate cat. Today, she follows Sarah around the house, always ready for a cuddle.",
+                "Max: A Fighter’s Heart": "Max’s journey was one of resilience. After months on the streets, he was adopted by the Thompsons. They showered him with love, and now, he enjoys long walks, belly rubs, and cozy evenings with his family.",
+                "Bella: Love Heals Everything": "Bella had given up hope until Jack found her. Slowly, she gained strength, trust, and joy. Today, she greets him with tail wags and barks of happiness every day."
+            };
+        
+            readMoreButtons.forEach(button => {
+                button.addEventListener("click", function () {
+                    const title = this.previousElementSibling.previousElementSibling.textContent;
+                    modalTitle.textContent = title;
+                    modalText.textContent = stories[title] || "Story not found.";
+                    modal.classList.add("show"); // Smooth fade-in
+                });
+            });
+        
+            closeModal.addEventListener("click", () => {
+                modal.classList.remove("show"); // Smooth fade-out
+            });
+        
+            window.addEventListener("click", (event) => {
+                if (event.target === modal) {
+                    modal.classList.remove("show");
+                }
+            });
+        });
+        
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const counters = document.querySelectorAll(".counter");
+
             const animateCounters = () => {
                 const triggerBottom = window.innerHeight * 0.85;
-        
+
                 counters.forEach(counter => {
                     const counterTop = counter.getBoundingClientRect().top;
                     if (counterTop < triggerBottom && !counter.classList.contains("started")) {
@@ -541,7 +611,7 @@
                         const target = +counter.getAttribute("data-target");
                         let start = 0;
                         const increment = Math.ceil(target / 100); // Adjust speed
-        
+
                         const updateCounter = () => {
                             start += increment;
                             if (start < target) {
@@ -551,16 +621,16 @@
                                 counter.innerText = target;
                             }
                         };
-        
+
                         updateCounter();
                     }
                 });
             };
-        
+
             window.addEventListener("scroll", animateCounters);
             animateCounters(); // Run once in case the section is already in view
         });
-        
+
 
         // Select a random joke and insert it into the page
         document.getElementById("joke-text").innerHTML = jokes[Math.floor(Math.random() * jokes.length)];

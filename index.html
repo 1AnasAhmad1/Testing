@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Petopia - Find Your Perfect Pet</title>
 </head>
-<body>
-    <header>
-        <button class="menu-button">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="4" y1="6" x2="28" y2="6"></line>
-                <line x1="4" y1="12" x2="28" y2="12"></line>
-                <line x1="4" y1="18" x2="28" y2="18"></line>
-            </svg>
-        </button>
 
-        <h1>
-            PET<img src="images/Petopia_Name_Logo.png" alt="Petopia" class="logo">PiA
-        </h1>
-    </header>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>
+                PET<img src="images/Petopia_Name_Logo.png" alt="Petopia" class="logo">PiA
+            </h1>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Join Us</a>
+        </div>
+    </nav>
 
     <div class="carousel">
         <img src="images/Img_header.png" alt="Pet Photo">
@@ -248,8 +251,8 @@
     </section>
 
     <section class="about-us">
-        <img src="images/About_Us.png" alt="About Us Section" class="about-us-full-image">
-    </section>   
+        <img src="images/About Us Section.png" alt="About Us Section" class="about-us-full-image">
+    </section>
 
     <!-- Connect With Us Section -->
     <section class="connect-section">
@@ -284,12 +287,44 @@
                         <span>Petopia Headquarters,<br>123 Pet Street,<br>City, Country</span>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </section>
 
-    <footer>
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Petopia</h3>
+                <p>Your go-to platform for pet adoption, rescue stories, and virtual adoption. Because every pet
+                    deserves a loving home! 🐾</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Adopt a Pet</a></li>
+                    <li><a href="#">Virtual Adoption</a></li>
+                    <li><a href="#">Rescue Stories</a></li>
+                    <li><a href="#">Success Stories</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Stay Connected</h3>
+                <p>Follow us on social media for the latest adoption updates!</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Petopia | Bringing Paws & People Together</p>
+        </div>
     </footer>
 </body>
 
