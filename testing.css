@@ -3,20 +3,50 @@
     src: url('./fonts/Lulu_Font.ttf') format('truetype');
 }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+/* Optional: Adding hover effects to scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Custom scrollbar for the entire page */
+html,
+body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) Transparent;    
+    margin: 0;
+    padding: 0;
+    background: #E8E6E7;
+}
+
 *{
-    /* font-family: "Inconsolata", serif; */
-    /* font-family: "Mulish", serif; */
     /* font-family: "Barlow", serif; */
-    /* font-family: "Roboto Condensed", serif; */
     font-family: "Roboto Slab", serif;
     /* font-family: "Philosopher", serif; */
     font-optical-sizing: auto;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    background: #E8E6E7;
+:root {
+    --background: #E8E6E7;
+    --foreground: #ffffff;
+    --primary: #552a6b;
+    --primary-light: #b0a5b7;
+    --primary-dark: #380355;
+    --accent: #f5d8f1;
 }
 
 .navbar {
@@ -29,9 +59,7 @@ body {
     border-bottom: 2px solid #8b6b6b;
     margin-bottom: 20px;
     position: relative;
-    /* Ensures child absolute positioning works */
     z-index: 2;
-    /* Keeps navbar above the background */
 }
 
 /* Full-screen background image */
@@ -45,26 +73,19 @@ body {
     background: url('/images2/Vector 21.png') no-repeat center top;
     background-size: cover;
     z-index: -1;
-    /* Places the image behind everything */
     opacity: 1;
-    /* Adjust opacity if needed */
 }
 
 .navbar::after {
     content: "";
     position: absolute;
     bottom: -3px;
-    /* Adjust as needed */
     left: 0;
     width: 100%;
     height: 3px;
-    /* Thickness of the line */
     background: linear-gradient(to right, #6c4372, #5a3a3a);
-    /* Gradient line */
     z-index: 3;
-    /* Keeps the line above background but below content */
 }
-
 
 .navbar h1 {
     margin: 0;
@@ -91,7 +112,6 @@ body {
 
 .logo img {
     height: 50px;
-    /* Adjust as needed */
     vertical-align: middle;
 }
 
@@ -114,6 +134,7 @@ body {
     border: 1px solid #5a3a3a;
 }
 
+/* Hero Section 1 */
 .adoption-banner {
     z-index: 2;
     position: relative;
@@ -128,19 +149,6 @@ body {
     overflow: hidden;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
-
-/* Add Dripping Effect as Background */
-.adoption-banner::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 120px;
-    /* Adjust height based on the image */
-    z-index: 0;
-}
-
 
 .banner-content {
     position: relative;
@@ -185,8 +193,7 @@ body {
     width: 100%;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
+/* Hero Section 2 */
 .perfect-pet {
     position: relative;
     z-index: 5;
@@ -302,218 +309,94 @@ body {
     transform: translateY(-3px);
 }
 
-/* Adoption Note Section - Elegant Theme */
-/* Adoption Path Section */
-.adoption-path {
-    margin: 60px auto;
-    padding: 50px 25px;
-    background: linear-gradient(to bottom, #F6E8FD, #cfb8be);
-    border-radius: 15px;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+/* Hero Section 3 */
+/* Adoption Note Section */
+.adoption-note {
+    position: relative;
+    margin: 0px auto;
+    padding: 60px;
+    border-radius: 20px;
     text-align: center;
-}
-
-.adoption-path h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #3d004d;
-    margin-bottom: 12px;
-}
-
-.adoption-path p {
-    font-size: 1.2rem;
-    font-style: italic;
-    color: #5a006e;
-    margin-bottom: 45px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Timeline Path */
-.timeline {
-    position: relative;
-    max-width: 750px;
-    margin: auto;
-}
-
-.timeline-step {
-    display: flex;
-    align-items: center;
-    margin-bottom: 35px;
-    position: relative;
-    text-align: left;
+    overflow: hidden;
     transition: transform 0.3s ease-in-out;
 }
 
-.timeline-step:hover {
-    transform: translateY(-5px);
+/* Section Hover Effect */
+.adoption-note:hover {
+    transform: scale(1.02);
 }
 
-/* Vertical Connector */
-.timeline-step::before {
-    content: '';
+/* Floating Design Element */
+.floating-element {
     position: absolute;
-    left: 40px;
-    top: 40px;
-    width: 3px;
-    height: 100%;
-    background: #5a006e;
-}
-
-.timeline-step:last-child::before {
-    display: none;
-}
-
-/* Step Circle */
-.circle {
-    width: 55px;
-    height: 55px;
-    background: #fff;
-    border: 4px solid #5a006e;
+    top: -30px; right: -50px;
+    width: 120px;
+    height: 120px;
+    background: rgba(56, 3, 85, 0.3);
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #5a006e;
-    box-shadow: 0 5px 15px rgba(90, 0, 110, 0.25);
-    position: relative;
-    z-index: 2;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: floatUpDown 3s infinite ease-in-out;
 }
 
-.circle:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(90, 0, 110, 0.3);
+/* Title Styling */
+.adoption-note h2 {
+    font-size: 2.8rem;
+    color: #380355;
+    font-weight: 700;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 0.8s forwards;
 }
 
-/* Content Box */
-.content {
-    background: #ffffff;
-    padding: 18px 25px;
-    border-radius: 10px;
-    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
-    margin-left: 25px;
-    flex: 1;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Quote Styling */
+.adoption-quote {
+    font-size: 1.6rem;
+    color: #5C3D2E;
+    font-style: italic;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeInUp 0.9s forwards 0.2s;
 }
 
-.content:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 12px 30px rgba(90, 0, 110, 0.25);
+/* Content Styling */
+.adoption-content {
+    text-align: left;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #333;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards 0.4s;
 }
 
-.content h3 {
-    font-size: 1.4rem;
-    color: #3d004d;
-    font-weight: 600;
-    margin-bottom: 8px;
+/* Animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.content p {
-    font-size: 1.1rem;
-    color: #4d0059;
-    line-height: 1.5;
+/* Floating Animation */
+@keyframes floatUpDown {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(20px); }
+    100% { transform: translateY(0); }
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .timeline-step {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    .adoption-note {
+        padding: 40px;
     }
-
-    .content {
-        margin-left: 0;
-        text-align: center;
-        padding: 20px;
+    .floating-element {
+        width: 80px;
+        height: 80px;
     }
-
-    .timeline-step::before {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .circle {
-        width: 50px;
-        height: 50px;
-        font-size: 1.3rem;
-    }
-}
-
-
-/* Virtual Adoption Section */
-.virtual-adoption {
-    background: #EDE7F6;
-    color: #4A2A7A;
-    padding: 80px 10%;
-    text-align: center;
-    position: relative;
-}
-
-/* Section Title */
-.section-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-/* Adoption Intro */
-.adoption-intro p {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Meet Your Virtual Pets */
-.virtual-pets h3 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.pets-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-.pet-card {
-    background: #F6F0FF;
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-    max-width: 250px;
-    box-shadow: 0px 0px 10px rgba(74, 42, 122, 0.15);
-}
-
-.pet-card h4 {
-    font-size: 1.4rem;
-    color: #4A2A7A;
-}
-
-.pet-card p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-}
-
-.btn-adopt {
-    background-color: #4A2A7A;
-    color: #EDE7F6;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.btn-adopt:hover {
-    background-color: #6C4F9C;
 }
 
 /* Rescue Documentary Section */
@@ -578,7 +461,6 @@ body {
 }
 
 .story-card img {
-    width: 100%;
     max-height: 300px;
     object-fit: cover;
     border-radius: 10px;
@@ -592,10 +474,23 @@ body {
 }
 
 .story-card p {
-    padding: 20px;
-    font-size: 1.1rem;
+    padding: 40px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-size: 1rem;
     margin-top: 10px;
     color: #333;
+}
+
+.quote-box1 {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 1.3rem;
+    font-style: italic;
+    margin: 20px auto;
+    font-weight: bold;
+    color: #4A2B6F;
 }
 
 /* Navigation Buttons - Clean Design */
@@ -659,119 +554,7 @@ body {
     background: #4A2B6F;
 }
 
-/* Adoption Success Section */
-.adoption-success {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    background: linear-gradient(to right, #F6E8FD, #EDE4FB);
-    padding: 80px 10%;
-    text-align: center;
-    border-radius: 20px;
-}
-
-/* Section Title */
-.section-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #3E1D6A;
-    margin-bottom: 20px;
-}
-
-/* Quote Box */
-.quote-box1 {
-    background: rgba(255, 255, 255, 0.6);
-    padding: 20px;
-    border-radius: 15px;
-    font-size: 1.3rem;
-    font-style: italic;
-    margin: 20px auto;
-    font-weight: bold;
-    color: #4A2B6F;
-}
-
-/* Adoption Grid */
-.adoption-grid {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-/* Story Box */
-.story-box {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    width: 30%;
-    min-width: 300px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-}
-
-.story-box:hover {
-    transform: scale(1.05);
-}
-
-/* Story Image */
-.story-image {
-    width: 100%;
-    height: 250px;
-    background-size: cover;
-    background-position: center;
-}
-
-/* Story Content */
-.story-content {
-    display: flex;
-    padding: 20px;
-    text-align: left;
-}
-
-.story-content h3 {
-    font-size: 1.5rem;
-    color: #4A2B6F;
-}
-
-.story-content p {
-    font-size: 1rem;
-    color: #555;
-}
-
-.read-more {
-    font-weight: bold;
-    color: #3E1D6A;
-    cursor: pointer;
-}
-
-/* Full Story Modal */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    width: 50%;
-    text-align: left;
-}
-
-.close-btn {
-    float: right;
-    font-size: 2rem;
-    cursor: pointer;
-    color: #3E1D6A;
-}
-
+/* Hero Section 6 */
 .adoption-journey {
     background: linear-gradient(to right, #FDF3FF, #EDE4FB);
     padding: 80px 10%;
@@ -805,15 +588,11 @@ body {
 }
 
 /* Alternating Layouts */
-.adoption-story.left {
+.left {
     flex-direction: row;
 }
 
-.adoption-story.right {
-    flex-direction: row-reverse;
-}
-
-.adoption-story.center {
+.center {
     flex-direction: column;
     text-align: center;
 }
@@ -825,13 +604,18 @@ body {
 }
 
 .story-image img {
-    width: 180px;
-    height: 180px;
+    width: 50%;
     border-radius: 15px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+.story-image-large{
+    display: flex;
+    
+}
+
 .story-image-large img {
+    object-fit: contain;
     width: 250px;
     height: auto;
     border-radius: 20px;
@@ -882,6 +666,7 @@ body {
     text-decoration: none;
 }
 
+/* Hero Section 5 */
 .adoption-stats {
     text-align: center;
     padding: 80px 10%;
